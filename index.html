@@ -45,11 +45,11 @@
 			<td>upgrade foo</td><td>apt-get update; apt-get upgrade foo</td>
 		</tr>
 	</table>
-	<p><small>note that apt-get is a wrapper for dpkg</small></p>
 </section>
 
 <section>
 	<h3>Package managers versus installers versus installing from source</h3>
+
 </section>
 
 <section>
@@ -58,60 +58,42 @@
 
 <section>
 	<h3>Language specific package managers</h3>
+	<p>Can install packages(usually a different name such as modules, libraries, or gems) globally, for the user, or for a specific project in some cases</p>
+	<table>
+		<tr><th>Language</th><th>Manager</th></tr>
+		<tr>
+			<td>Javascript</td><td>NPM</td>
+		</tr>
+		<tr>
+			<td>PHP</td><td>Composer</td>
+		</tr>
+		<tr>
+			<td>Python</td><td>Pip</td>
+		</tr>
+		<tr>
+			<td>Ruby</td><td>gem</td>
+		</tr>
+		<tr>
+			<td>Ruby</td><td>Bundler</td>
+		</tr>
+	</table>
 </section>
 
 <section>
 	<h3>When package managers aren't mutually exclusive</h3>
-
+	<p> If two package managers A and B can install the systemwide package foo, which gets priority?</p>
+	<p class="incremental"><span>The first executable in the path</span></p>
 </section>
 
 <section>
 	<h3>When package managers don't control what they install</h3>
-
+	<p>Sometimes a package is simply an installer. By simply using a package as an installer for another program, a package manager strips itself of the ability to manage the removal of this program.</p>
+	<p>For an example see NPM's package <a href="https://www.npmjs.com/package/homebrew">homebrew</a>. Which simply runs a post install script that will then lose the ability to remove homebrew with NPM.</p>
 </section>
-
 <section>
-    <h3>An incremental list</h3>
-    <ul class="incremental">
-      <li>Item 1
-      <li>Item 2
-      <li>Item 3
-        <ul class="incremental">
-          <li> Item 3.1
-          <li> Item 3.2
-        </ul>
-    </ul>
-    <div role="note">Some notes. They are only visible using onstage shell.</div>
-</section>
-
-<section>
-  <blockquote>
-    Who's brave enough to fly into something we all keep calling a death sphere?
-  </blockquote>
-  <details>
-    <p>In the onstage shell, notes scroll rather than overflow:</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dui eu est feugiat lacinia sit amet nec leo. Mauris eu ipsum leo. Nulla mi odio, cursus sed sollicitudin non, fringilla id magna. Suspendisse sit amet posuere elit. Maecenas iaculis, turpis a placerat imperdiet, libero lorem feugiat nisi, nec tincidunt diam nibh sit amet massa. Vestibulum quis adipiscing tellus. Maecenas sollicitudin sodales pulvinar. Donec dui ipsum, bibendum facilisis consequat interdum, tempus ut mauris. Aliquam ut dolor nec odio scelerisque bibendum quis in neque. Aliquam dui dui, pulvinar quis fermentum quis, gravida eu augue. Nunc tristique dolor a urna pulvinar bibendum. Curabitur mollis cursus neque, in scelerisque metus porta non. Donec tempor enim in nibh vestibulum et convallis nisi malesuada. Duis ut lectus sed metus venenatis porttitor id pharetra quam. Suspendisse sapien turpis, ornare in molestie et, gravida eget turpis.
-    </p>
-  </details>
-</section>
-
-<section>
-    <h2>Part two</h2>
-</section>
-
-<section>
-    <figure> <!-- Figures are used to display images and videos fullpage -->
-      <img src="http://placekitten.com/g/800/600">
-      <figcaption>An image</figcaption>
-    </figure>
-    <div role="note">Kittens are so cute!</div>
-</section>
-
-<section>
-    <figure> <!-- Videos are automatically played -->
-      <video src="http://videos-cdn.mozilla.net/brand/Mozilla_Firefox_Manifesto_v0.2_640.webm" poster="http://www.mozilla.org/images/about/poster.jpg"></video>
-      <figcaption>A video</figcaption>
-    </figure>
+	<h3>Package managers without control (cont.)</h3>
+	<p class="incremental"><span>How do you delete the package?</span></p>
+	<p class="incremental"><span>Removing the package, leaves the software</span></p>
 </section>
 
 <section>
