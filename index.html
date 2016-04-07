@@ -25,6 +25,7 @@
 		<li>Upgrade packages</li>
 		<li>Display installed packages</li>
 		<li>Removes packages</li>
+		<li>Communicate with a remote repository of packages</li>
 	</ul>
 </section>
 
@@ -50,10 +51,38 @@
 <section>
 	<h3>Package managers versus installers versus installing from source</h3>
 
+	<img src="serveimage.gif"></img>
 </section>
 
 <section>
-	use the right  package manager for the job
+	<table>
+		<tr>
+			<td>Package managers</td>
+			<td>
+				<ul>
+					<li>Handles many pieces of software</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Installers</td>
+			<td>
+				<ul>
+					<li>Handles a single piece of software</li>
+					<li>Individual installation software for each</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>From source</td>
+			<td>
+				<ul>
+					<li>Allows auditing of software installed</li>
+					<li>Easy to lose track of software</li>
+				</ul>
+			</td>
+		</tr>
+	</table>
 </section>
 
 <section>
@@ -80,9 +109,21 @@
 </section>
 
 <section>
+	<blockquote>If you're installing bower through apt, you're doing it wrong -J3RN</blockquote>
+</section>
+
+<section>
+	<h3>use the right  package manager for the job</h3>
+	<p> If you're developing a language-specific development tool, why would you install it through apt? It makes sense to keep your packages separated</p>
+	<img src="xkcd.png"></img>
+</section>
+
+<section>
 	<h3>When package managers aren't mutually exclusive</h3>
 	<p> If two package managers A and B can install the systemwide package foo, which gets priority?</p>
 	<p class="incremental"><span>The first executable in the path</span></p>
+	<br/>
+	<p>Note that this can lead to problems having multiple versions of a package especially when features are added or deprecated</p>
 </section>
 
 <section>
@@ -97,7 +138,8 @@
 </section>
 <section>
 	<h3>Unpublishing packages and recent dilemmas</h3>
-	
+	<a href="https://www.kb.cert.org/vuls/id/319816"> NPM vulnerability</a>
+	<a href="http://blog.npmjs.org/post/141905368000/changes-to-npms-unpublish-policy"> How NPM tackled it </a>
 </section>
 
 <section>
@@ -113,6 +155,11 @@
 <style>
   table {
       text-align: left;
+  }
+
+  img {
+	  margin: 10px;
+          margin-top: -30px;
   }
 
   th, td {
@@ -158,8 +205,8 @@
   }
 
   p, table {
-    margin: 40px;
-    font-size: 25px;
+    margin: 30px;
+    font-size: 20px;
   }
 
   blockquote {
